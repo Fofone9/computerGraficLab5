@@ -70,6 +70,6 @@ void GraphicObject::draw()
 	}
 	glPushMatrix();
 	glMultMatrixf((GLfloat*)&modelMatrix);
-	glutWireTeapot(1.0);
+	glutSolidTeapot(1.0);
 	glPopMatrix();
 }
