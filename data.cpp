@@ -27,9 +27,8 @@ void initData() {
 	materials[3]->load("materials//material_4.txt");
 
 	camera.setPosition({ 10, 15, 17.5 });
-	//light.setDiffuse({ 64,64,64,1 });
-	//light.setSpecular({ 64,64,64,1 });
-	light.apply(GL_LIGHT0);
+	light.setDiffuse({ 64,64,64,1 });
+	light.setSpecular({ 64,64,64,1 });
 	obj1.setPosition(glm::vec3(4, 0, 0));
 	obj1.setAngle(180);
 	obj1.set—olor(glm::vec3(1, 0, 0));

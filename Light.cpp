@@ -3,8 +3,8 @@
 Light::Light() {
 	position = { 10, 10, 10, 1 };
 	ambient = { 0.2, 0.2, 0.2, 1.0 };
-	diffuse = { 1,1,1,1 };
-	specular = { 1,1,1,1 };
+	diffuse = { 0,0,0,1 };
+	specular = { 0,0,0,1 };
 
 }
 Light::Light(vec3 position) {
@@ -34,8 +34,8 @@ void Light::setSpecular(vec4 color) {
 	specular = color;
 }
 void Light::apply(GLenum LightNumber = GL_LIGHT0) {
-	GLfloat globalAmbientColor[] = { 0.2, 0.2, 0.2, 1.0 };
-	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, globalAmbientColor);
+	//GLfloat globalAmbientColor[] = { 0.2, 0.2, 0.2, 1.0 };
+	//glLightModelfv(GL_LIGHT_MODEL_AMBIENT, globalAmbientColor);
 	glLightfv(LightNumber, GL_AMBIENT, value_ptr(ambient));
 	glLightfv(LightNumber, GL_DIFFUSE, value_ptr(diffuse));
 	glLightfv(LightNumber, GL_SPECULAR, value_ptr(specular));
