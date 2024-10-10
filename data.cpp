@@ -21,10 +21,10 @@ void initData() {
 	{
 		materials.emplace_back(std::make_shared<PhongMaterial>());
 	}
-	materials[0]->load("materials//mat1.txt");
-	materials[1]->load("materials//mat2.txt");
-	materials[2]->load("materials//mat3.txt");
-	materials[3]->load("materials//mat4.txt");
+	materials[0]->load("materials//material_1.txt");
+	materials[1]->load("materials//material_2.txt");
+	materials[2]->load("materials//material_3.txt");
+	materials[3]->load("materials//material_4.txt");
 
 	obj1.setPosition(glm::vec3(4, 0, 0));
 	obj1.setAngle(180);

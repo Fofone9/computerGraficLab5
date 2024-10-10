@@ -23,6 +23,11 @@ void PhongMaterial::setShininess(float p) {
 }
 void PhongMaterial::load(string filename) {
 	ifstream reader(filename);
+	if (!reader)
+	{
+		std::cerr << "\nFailed to load from " << filename;
+		return;
+	}
 	string name;
 	reader >> name;
 	for (int i = 0; i < 4; i++)
