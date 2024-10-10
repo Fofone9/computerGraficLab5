@@ -3,8 +3,8 @@
 Light::Light() {
 	position = { 10, 10, 10, 1 };
 	ambient = { 0.2, 0.2, 0.2, 1.0 };
-	diffuse = { 0,0,0,0 };
-	specular = { 0,0,0,0 };
+	diffuse = { 1,1,1,1 };
+	specular = { 1,1,1,1 };
 
 }
 Light::Light(vec3 position) {
@@ -40,5 +40,5 @@ void Light::apply(GLenum LightNumber = GL_LIGHT0) {
 	glLightfv(LightNumber, GL_DIFFUSE, value_ptr(diffuse));
 	glLightfv(LightNumber, GL_SPECULAR, value_ptr(specular));
 	glLightfv(LightNumber, GL_POSITION, value_ptr(position));
-	glEnable(GL_LIGHTING);
+	glEnable(LightNumber);
 }
